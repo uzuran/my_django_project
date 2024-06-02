@@ -50,3 +50,8 @@ def clock_view(request):
         'current_date': now.strftime("%Y-%m-%d"),
     }
     return render(request, 'main_work_screen.html', context)
+
+
+def user_check(request):
+    user = request.user
+    return render(request, 'main_work_screen.html', {'user': user})
