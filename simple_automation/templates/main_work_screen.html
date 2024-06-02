@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% load static %}
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Simple automation</title>
     <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="{% static 'js/clock.js' %}"></script>
-    <link href="{% static 'css/main_work_screen.css' %}" rel="stylesheet">
-</head>
-<body onload="updateTime()">
-        <div class="card-header bg-primary text-center">
-          <img src="{% static 'simple_automation/img/logo.png' %}" alt="Logo" class="img-fluid">
-        </div>
-    <div class="container clock-container">
-        <div class="card p-4 mt-4">
-            <p class="lead">Time: <span id="time" class="font-weight-bold">{{ current_time }}</span></p>
-            <p class="lead">Date: <span id="date" class="font-weight-bold">{{ current_date }}</span></p>
-        </div>
+    <link href="{% static 'css/main_work_screen.css' %}" rel="stylesheet" />
+  </head>
+  <body onload="updateTime()">
+    <div class="card-header bg-primary text-center">
+      <img
+        src="{% static 'simple_automation/img/logo.png' %}"
+        alt="Logo"
+        class="img-fluid"
+      />
     </div>
-    <hr class="border border-primary border-3 opacity-75">
+    <div class="container clock-container">
+      <div class="card p-4 mt-4">
+        <p class="lead">
+          Time:
+          <span id="time" class="font-weight-bold">{{ current_time }}</span>
+        </p>
+        <p class="lead">
+          Date:
+          <span id="date" class="font-weight-bold">{{ current_date }}</span>
+        </p>
+      </div>
+    </div>
+    <hr class="border border-primary border-3 opacity-75" />
+
+    <!--Containers for app chose -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="custom-container">
+            <h1>NC Renamer</h1>
+            <p>
+              This program can rename a specified part of the NC program. At
+              this moment, its help rename to the right sentence materials names
+              after software generate NC code.
+            </p>
+            <button class="btn btn-primary">Use App</button>
+          </div>
+        </div>
+        <!--Containers for app chose 2 -->
+        <div class="col-md-4">
+          <div class="custom-container">
+            <h1>To do list</h1>
+            <p>Description of the project goes here.</p>
+            <button class="btn btn-primary">Use App</button>
+          </div>
+        </div>
+
+        <!--Containers for app chose 3-->
+        <div class="col-md-4">
+          <div class="custom-container">
+            <h1>Project Name</h1>
+            <p>Description of the project goes here.</p>
+            <button class="btn btn-primary">Use App</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
