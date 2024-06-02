@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Simple automation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="{% static 'js/clock.js' %}"></script>
+    <link href="{% static 'css/main_work_screen.css' %}" rel="stylesheet">
+</head>
+<body onload="updateTime()">
+        <div class="card-header bg-primary text-center">
+          <img src="{% static 'simple_automation/img/logo.png' %}" alt="Logo" class="img-fluid">
+        </div>
+    <div class="container clock-container">
+        <div class="card p-4 mt-4">
+            <p class="lead">Time: <span id="time" class="font-weight-bold">{{ current_time }}</span></p>
+            <p class="lead">Date: <span id="date" class="font-weight-bold">{{ current_date }}</span></p>
+        </div>
+    </div>
+    <hr class="border border-primary border-3 opacity-75">
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

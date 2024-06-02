@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  background-color: #ebfeff;
+}
+.portfolio {
+  max-width: 1500px;
+  margin: auto;
+  filter: drop-shadow(0px 10px 81px rgba(0, 0, 0, 0.97));
+}
+.navbar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #ebfeff;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  filter: drop-shadow(0px 10px 81px rgba(0, 0, 0, 0.97));
+}
+#menu__toggle {
+  display: none;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+  height: 25px;
+  font-size: 18px;
+  font-family: "Sora";
+  font-style: "regular";
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+  
+}
+
+li:hover {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  border-radius: 35px;
+  background-color: #16334410;
+}
+.head {
+  background-color: #ebfeff;
+  font-family: "Sora";
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 170px;
+  font-size: 20px;
+  font-style: normal;
+  gap: 200px;
+}
+.ft {
+  width: 250px;
+}
+
+.ft1 {
+  width: 400px;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  font-size: 20px;
+  font-style: normal;
+  background-color: white;
+  gap: 200px;
+}
+.button-for-download {
+  margin: 20px 0px;
+  width: 190px;
+  height: 60px;
+  font-family: "serif";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease 0s;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.button-for-download:hover {
+  background-color: #457b9d;
+  box-shadow: 0px 15px 15px rgba(33, 127, 182, 0.5);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 100px;
+  padding: 100px;
+}
+h1 {
+  font-family: "Sora";
+  font-style: bold;
+  font-size: 25px;
+}
+h2 {
+  color: #457b9d;
+  font-size: 22px;
+}
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 70px;
+}
+.projects_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  background-color: #ebfeff;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+.gallery:hover {
+  border: 1px solid #777;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.greetings {
+  color: #457b9d;
+  font-family: "Sora";
+  font-size: 20px;
+}
+
+.welcome-text {
+  font-family: "Sora";
+  font-size: 15px;
+  font-style: regular;
+}
+
+.text {
+  margin-bottom: 0px;
+}
+
+.text-about-me {
+  font-family: "Sora";
+  font-size: 15px;
+  font-style: regular;
+}
+
+/*Adaptive settings.*/
+@media only screen and (max-width: 900px) {
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: 0.25s;
+  }
+  .menu__btn > span::before {
+    content: "";
+    height: 2px;
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    height: 2px;
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 250%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #eceff1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.25s;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: 0.25s;
+  }
+  .menu__item:hover {
+    background-color: #cfd8dc;
+  }
+  .navbar {
+    display: block;
+  }
+  .logo-name {
+    text-align: right;
+    margin-right: 40px;
+  }
+  .header {
+    flex-direction: column-reverse;
+    padding: 100px;
+    gap: 50px;
+  }
+  .about {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .skills-icons .text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+}
