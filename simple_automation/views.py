@@ -32,7 +32,7 @@ def user_login_view(request):
         form = LoginForm()
     return render(request, 'simple_app.html', {'form': form})
 
-# TODO logout button, button
+# TODO logout button
 # # logout page
 # def user_logout(request):
 #     logout(request)
