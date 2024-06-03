@@ -32,6 +32,7 @@ def user_login_view(request):
         form = LoginForm()
     return render(request, 'simple_app.html', {'form': form})
 
+# TODO logout button, button
 # # logout page
 # def user_logout(request):
 #     logout(request)
@@ -50,3 +51,8 @@ def clock_view(request):
         'current_date': now.strftime("%Y-%m-%d"),
     }
     return render(request, 'main_work_screen.html', context)
+
+
+def user_check(request):
+    user = request.user
+    return render(request, 'main_work_screen.html', {'user': user})
