@@ -64,10 +64,10 @@ def user_check(request):
 def upload_file(request):
 
     if request.method == 'POST':
-        form = UploadFileForm(request.POST, request.FILES)
         file = request.FILES.getlist('file')
+        file_names = [f.name for f in file]
         # Here we can work with the files use basic python scripts.
-        return HttpResponse(f"This is file name:{str(file)}")
+        return HttpResponse(f"This is file name:{','.join(file_names)}")
     else:
         form = UploadFileForm()
     return render(request, 'main_work_screen.html', {'form': form})
