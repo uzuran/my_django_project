@@ -1,8 +1,11 @@
 """Views for simple app"""
 import django.contrib.auth
 from datetime import datetime
+
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from simple_automation.forms import SignupForm, LoginForm
+
+from simple_automation.forms import SignupForm, LoginForm, UploadFileForm
 
 
 def user_register_view(response):
@@ -56,3 +59,15 @@ def clock_view(request):
 def user_check(request):
     user = request.user
     return render(request, 'main_work_screen.html', {'user': user})
+
+
+def upload_file(request):
+
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)
+        file = request.FILES.getlist('file')
+        # Here we can work with the files use basic python scripts.
+        return HttpResponse(f"This is file name:{str(file)}")
+    else:
+        form = UploadFileForm()
+    return render(request, 'main_work_screen.html', {'form': form})
