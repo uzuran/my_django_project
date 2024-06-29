@@ -1,15 +1,11 @@
 """Views for simple app"""
-import os
 import zipfile
-
-import django.contrib.auth
+import io
 from datetime import datetime
+import django.contrib.auth
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from my_portfolio_web import settings
 from simple_automation.forms import SignupForm, LoginForm, UploadFileForm
-from django.shortcuts import render
-import io
 
 
 def user_register_view(response):
