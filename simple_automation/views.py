@@ -3,6 +3,7 @@ import zipfile
 import io
 from datetime import datetime
 import django.contrib.auth
+import pyexcel_ods
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from simple_automation.forms import SignupForm, LoginForm, UploadFileForm
@@ -63,31 +64,54 @@ def user_check(request):
 
 def upload_file(request):
     if request.method == 'POST':
-        files = request.FILES.getlist('file')
-        response = HttpResponse(content_type='application/zip')
-        response['Content-Disposition'] = 'attachment; filename="modified_files.zip"'
+        form = UploadFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            files = request.FILES.getlist('file')
+            material_name_map = {}
 
-        # Create a zip file to hold the modified files
-        with io.BytesIO() as zip_buffer:
-            with zipfile.ZipFile(zip_buffer, 'w') as zip_file:
-                for uploaded_file in files:
-                    # Check if the file ends with .txt
-                    if uploaded_file.name.endswith('.txt'):
-                        # Read the uploaded file
-                        file_content = uploaded_file.read().decode('utf-8')
+            # Process .ods file to create material_name_map
+            ods_file_path = 'simple_automation/static/materials.ods'
+            data = pyexcel_ods.get_data(ods_file_path)
+            sheet = data.get("Sheet1", [])
+            for row in sheet:
+                if len(row) >= 2:
+                    incorrect_name = row[0].strip()
+                    correct_name = row[1].strip()
+                    material_name_map[incorrect_name] = correct_name
 
-                        # Replace '1.4301-4.0' with '1.4301'
-                        new_content = file_content.replace('1.4301-4.0', '1.4301')
+            response = HttpResponse(content_type='application/zip')
+            response['Content-Disposition'] = 'attachment; filename="modified_files.zip"'
 
-                        # Add the modified file to the zip
-                        zip_file.writestr(uploaded_file.name, new_content)
+            with io.BytesIO() as zip_buffer:
+                with zipfile.ZipFile(zip_buffer, 'w') as zip_file:
+                    for uploaded_file in files:
+                        if uploaded_file.name.endswith('.NC'):
+                            file_content = uploaded_file.read().decode('utf-8')
+                            lines = file_content.splitlines()
 
-            # Set the zip buffer's position to the beginning
-            zip_buffer.seek(0)
-            response.write(zip_buffer.read())
+                            # Function to update material names
+                            def update_material_names(lines_nc, material_name):
+                                updated_lines = []
+                                for line in lines_nc:
+                                    original_line = line.strip("() \n")
+                                    updated_name = original_line
+                                    for incorrect_name_in_sheet, correct_name_in_sheet in material_name.items():
+                                        if incorrect_name_in_sheet in original_line:
+                                            updated_name = original_line.replace(incorrect_name_in_sheet, correct_name_in_sheet)
+                                            break
+                                    updated_lines.append(f"({updated_name})\n")
+                                return updated_lines
 
-        return response
+                            updated_lines = update_material_names(lines, material_name_map)
+                            new_content = ''.join(updated_lines)
+                            zip_file.writestr(uploaded_file.name, new_content)
+
+                zip_buffer.seek(0)
+                response.write(zip_buffer.read())
+
+            return response
     else:
         form = UploadFileForm()
-        return render(request, 'main_work_screen.html', {'form': form})
+
+    return render(request, 'main_work_screen.html', {'form': form})
 
