@@ -91,7 +91,7 @@ def upload_file(request):
 
                             # Function to update material names
                             def update_material_names(lines_nc, material_name):
-                                updated_lines = []
+                                updated_text_lines = []
                                 for line in lines_nc:
                                     original_line = line.strip("() \n")
                                     updated_name = original_line
@@ -99,8 +99,8 @@ def upload_file(request):
                                         if incorrect_name_in_sheet in original_line:
                                             updated_name = original_line.replace(incorrect_name_in_sheet, correct_name_in_sheet)
                                             break
-                                    updated_lines.append(f"({updated_name})\n")
-                                return updated_lines
+                                    updated_text_lines.append(f"({updated_name})\n")
+                                return updated_text_lines
 
                             updated_lines = update_material_names(lines, material_name_map)
                             new_content = ''.join(updated_lines)
