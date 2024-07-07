@@ -9,5 +9,5 @@ urlpatterns = [
     path('login/', v.user_login_view, name='simple_app.html'),
     path('main_work_screen', v.main_work_screen_view, name='main_work_screen.html'),
     path('main_work_screen', v.clock_view, name='main_work_screen.html'),
-    path('man_work_screen', v.upload_file, name='main_work_screen.html')
+    path('update_file', v.upload_file, name='main_work_screen.html')
 ]
