@@ -19,11 +19,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-
-from my_portfolio_web_app import views
+from my_portfolio_web_app.views import IndexView
 
 urlpatterns = [
-    path('', views.index, name='index.html'),
+    path('', IndexView.as_view(), name='index'),
     path('admin/', admin.site.urls),
     path('simple_automation/', include('simple_automation.urls')),
     path('', include('django.contrib.auth.urls')),

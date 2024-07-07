@@ -5,13 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="static/my_portfolio_web_app/css/main.css" />
     {% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="static/my_portfolio_web_app/css/main.css" />
+    <link rel="stylesheet" href="static/my_portfolio_web_app/css/hamburger.css" />
+    <link rel="stylesheet" href="static/my_portfolio_web_app/css/projects.css" />
+    <link rel="stylesheet" href="static/my_portfolio_web_app/css/sidebar.css" />
   </head>
   <body class="main-body-class">
+
+    <div class="icon-bar">
+      <a href="https://www.facebook.com/winyl.beat.1" class="facebook"><i class="fa fa-facebook"></i></a> 
+      <a href="mailto:else.artem@gmail.com" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
+      <a href="https://www.linkedin.com/in/ar%C5%A5om-%C4%8Dernopa%C5%A1%C4%8Denko-a65b82229/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/uzuran" class="github"><i class="fa fa-github"></i></a>
+      <a href="https://wa.me/+420704214083" class="whatsup"><i class="fa fa-whatsapp"></i></a>
+      <a href="https://t.me/+420704214083" class="telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+    </div>
+
     <div class="navbar">
       <h1 class="logo-name">Černopaščenko</h1>
-      <div class="hamburger-menu">
+      <div class="hamburger_menu">
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
           <span></span>
@@ -38,7 +53,7 @@
             Let's embark on this journey together as I introduce myself and share my passions and
             experiences.
             </p>
-           <a href="{% static 'cv_en.pdf' %}"><button class="button-for-download">My curriculum vitae english</button></a>
+          <a href="{% static 'cv_en.pdf' %}"><button class="button-for-download">My curriculum vitae english</button></a>
             <a href="{% static 'cv_cz.pdf' %}"><button class="button-for-download">My curriculum vitae czech</button></a>
           </div>
           <div class="foto">
@@ -69,10 +84,10 @@
           <h1>What I am capable of?</h1>
           <div class="skills-icons">
             <img  src="{% static 'my_portfolio_web_app/img/python.png' %}" alt="python" />
-            <img  src="{% static 'my_portfolio_web_app/img/django.png' %}" alt="django" />
-            <img  src="{% static 'my_portfolio_web_app/img/selenium.png' %}" alt="selenium" />
-            <img  src="{% static 'my_portfolio_web_app/img/sql.png' %}" alt="sql" />
-            <img  src="{% static 'my_portfolio_web_app/img/css.png' %}" alt="css" />
+            <img   src="{% static 'my_portfolio_web_app/img/django.png' %}" alt="django" />
+            <img   src="{% static 'my_portfolio_web_app/img/selenium.png' %}" alt="selenium" />
+            <img   src="{% static 'my_portfolio_web_app/img/sql.png' %}" alt="sql" />
+            <img   src="{% static 'my_portfolio_web_app/img/css.png' %}" alt="css" />
             <img  src="{% static 'my_portfolio_web_app/img/html.png' %}" alt="html" />
           </div>
         </div>
@@ -82,13 +97,13 @@
           <div class="projects_gallery">
           <div class="gallery">
             <a target="_blank" href="{% url 'simple_app.html' %}">
-              <img src="{% static 'my_portfolio_web_app/img/simple_automation.png' %}" alt="simple-automation">
+              <img  src="{% static 'my_portfolio_web_app/img/simple_automation.png' %}" alt="simple-automation">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>
           <div class="gallery">
             <a target="_blank" href="https://git-scm.com/">
-              <img src="{% static 'my_portfolio_web_app/img/fake_project.png' %}" alt="Cinque Terre">
+              <img  src="{% static 'my_portfolio_web_app/img/fake_project.png' %}" alt="Cinque Terre">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>         
@@ -111,16 +126,7 @@
           <div id="contacts" class="contacts">
           <h2>Contacts</h2>
           <h1>Get in touch</h1>
-          <p>    <a href="mailto:email@example.com">else.artem@gmail.com</a>
-          </a></p>
-          <div class="contacts_links">
-          <a target="_blank" href="https://git-scm.com/">
-            <img src="../my_web/img/GitHub.png" alt="Git" width="40" height="40">
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/feed/">
-            <img src="../my_web/img/LinkedIn.png" alt="Linkedin" width="40" height="40">
-          </a>
-        </div>
+          <p><a href="mailto:email@example.com">else.artem@gmail.com</a></p>
           <p> Copyright © 2024. Develop by Ritachka</p>
         </div>
         </footer>

@@ -19,10 +19,42 @@ class LoginForm(forms.Form):
 
 
 class MultipleFileInput(forms.ClearableFileInput):
+    """Class for allowed to multiply selection."""
     allow_multiple_selected = True
 
 
 class MultipleFileField(forms.FileField):
+    """
+    A custom form field for handling multiple file uploads.
+
+    This class extends Django's FileField to support multiple file uploads. It uses
+    a custom widget, `MultipleFileInput`, to allow selecting multiple files at once.
+    The clean method is overridden to handle and validate each file individually if
+    multiple files are uploaded.
+
+    Methods:
+    --------
+    __init__(*args, **kwargs):
+        Initializes the field with the custom widget for multiple file input.
+
+    clean(data, initial=None):
+        Cleans and validates each file in the input data. If multiple files are
+        provided, it returns a list of cleaned files. If a single file is provided,
+        it returns the cleaned file.
+
+    Parameters:
+    -----------
+    *args : tuple
+        Variable length argument list.
+    **kwargs : dict
+        Arbitrary keyword arguments.
+
+    Attributes:
+    -----------
+    widget : MultipleFileInput
+        The widget used for rendering the input field, set to allow multiple file
+        selection.
+    """
     def __init__(self, *args, **kwargs):
         kwargs.setdefault("widget", MultipleFileInput())
         super().__init__(*args, **kwargs)
@@ -37,4 +69,5 @@ class MultipleFileField(forms.FileField):
 
 
 class UploadFileForm(forms.Form):
+    """Upload file form."""
     file = MultipleFileField(label='Select files', required=False)
