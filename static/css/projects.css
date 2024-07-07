@@ -1,3 +1,4 @@
+
 .projects {
     display: flex;
     justify-content: space-between;
@@ -11,7 +12,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-
 }
 div.gallery {
     margin: 5px;
