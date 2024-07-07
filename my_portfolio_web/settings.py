@@ -17,7 +17,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),  # Optional: for global/static files
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Quick-start development settings - unsuitable for production
