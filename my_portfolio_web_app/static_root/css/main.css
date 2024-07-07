@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  background-color: #ebfeff;
+}
+.portfolio {
+  max-width: 1500px;
+  margin: auto;
+  filter: drop-shadow(0px 10px 81px rgba(0, 0, 0, 0.97));
+}
+.head {
+  background-color: #ebfeff;
+  font-family: "Sora";
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 170px;
+  font-size: 20px;
+  font-style: normal;
+  gap: 200px;
+}
+.ft {
+  width: 250px;
+}
+.ft1 {
+  width: 400px;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  font-size: 20px;
+  font-style: normal;
+  background-color: white;
+  gap: 200px;
+}
+.button-for-download {
+  margin: 20px 0px;
+  width: 190px;
+  height: 60px;
+  font-family: "serif";
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease 0s;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 35px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+.button-for-download:hover {
+  background-color: #457b9d;
+  box-shadow: 0px 15px 15px rgba(33, 127, 182, 0.5);
+  color: #fff;
+  transform: translateY(-7px);
+}
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 100px;
+  padding: 100px;
+}
+h1 {
+  font-family: "Sora";
+  font-style: bold;
+  font-size: 25px;
+}
+h2 {
+  color: #457b9d;
+  font-size: 22px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 100px;
+  background-color: #ebfeff;
+}
+.greetings {
+  color: #457b9d;
+  font-family: "Sora";
+  font-size: 20px;
+}
+.welcome-text {
+  font-family: "Sora";
+  font-size: 15px;
+  font-style: regular;
+}
+.text {
+  margin-bottom: 0px;
+}
+.text-about-me {
+  font-family: "Sora";
+  font-size: 15px;
+  font-style: regular;
+}
+/*Adaptive settings.*/
+@media only screen and (max-width: 900px) {
+  .header {
+    flex-direction: column-reverse;
+    padding: 100px;
+    gap: 50px;
+  }
+  .about {
+    flex-direction: column;
+    gap: 100px;
+  }
+  .skills-icons .text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

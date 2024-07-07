@@ -1,0 +1,29 @@
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px; /* Add some margin to the top for spacing */
+}
+
+.logo {
+    max-width: 200px; /* Adjust the size of the logo */
+    margin-bottom: 20px; /* Add some margin below the logo */
+}
+
+
+.custom-container {
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 25px;
+    border-radius: 5px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center align text */
+}
+
+.custom-container button {
+    margin-top: 15px; /* Adjust as needed */
+}

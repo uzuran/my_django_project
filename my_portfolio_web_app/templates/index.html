@@ -8,10 +8,10 @@
     {% load static %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="static/my_portfolio_web_app/css/main.css" />
-    <link rel="stylesheet" href="static/my_portfolio_web_app/css/hamburger.css" />
-    <link rel="stylesheet" href="static/my_portfolio_web_app/css/projects.css" />
-    <link rel="stylesheet" href="static/my_portfolio_web_app/css/sidebar.css" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/hamburger.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}" />
+   <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" />
   </head>
   <body class="main-body-class">
 
@@ -57,13 +57,13 @@
             <a href="{% static 'cv_cz.pdf' %}"><button class="button-for-download">My curriculum vitae czech</button></a>
           </div>
           <div class="foto">
-            <img class="ft" src="{% static 'my_portfolio_web_app/img/face.png' %}" alt="face" />
+            <img class="ft" src="{% static 'img/face.png' %}" alt="face" />
           </div>
         </div>
 
         <div id="about" class="about">
           <div class="foto">
-            <img class="ft2" src="{% static 'my_portfolio_web_app/img/code_typing.png' %}" alt="about" />
+            <img class="ft2" src="{% static 'img/code_typing.png' %}" alt="about" />
           </div>
           <div class="text">
             <h2>About</h2>
@@ -83,12 +83,12 @@
           <h2>Skills</h2>
           <h1>What I am capable of?</h1>
           <div class="skills-icons">
-            <img  src="{% static 'my_portfolio_web_app/img/python.png' %}" alt="python" />
-            <img   src="{% static 'my_portfolio_web_app/img/django.png' %}" alt="django" />
-            <img   src="{% static 'my_portfolio_web_app/img/selenium.png' %}" alt="selenium" />
-            <img   src="{% static 'my_portfolio_web_app/img/sql.png' %}" alt="sql" />
-            <img   src="{% static 'my_portfolio_web_app/img/css.png' %}" alt="css" />
-            <img  src="{% static 'my_portfolio_web_app/img/html.png' %}" alt="html" />
+            <img  src="{% static 'img/python.png' %}" alt="python" />
+            <img   src="{% static 'img/django.png' %}" alt="django" />
+            <img   src="{% static 'img/selenium.png' %}" alt="selenium" />
+            <img   src="{% static 'img/sql.png' %}" alt="sql" />
+            <img   src="{% static 'img/css.png' %}" alt="css" />
+            <img  src="{% static 'img/html.png' %}" alt="html" />
           </div>
         </div>
         <div id="projects" class="projects">
@@ -97,25 +97,25 @@
           <div class="projects_gallery">
           <div class="gallery">
             <a target="_blank" href="{% url 'simple_app.html' %}">
-              <img  src="{% static 'my_portfolio_web_app/img/simple_automation.png' %}" alt="simple-automation">
+              <img  src="{% static 'img/simple_automation.png' %}" alt="simple-automation">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>
           <div class="gallery">
             <a target="_blank" href="https://git-scm.com/">
-              <img  src="{% static 'my_portfolio_web_app/img/fake_project.png' %}" alt="Cinque Terre">
+              <img  src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>         
           <div class="gallery">
             <a target="_blank" href="https://git-scm.com/">
-              <img src="{% static 'my_portfolio_web_app/img/fake_project.png' %}" alt="Cinque Terre">
+              <img src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>          
           <div class="gallery">
             <a target="_blank" href="https://git-scm.com/">
-              <img src="{% static 'my_portfolio_web_app/img/fake_project.png' %}" alt="Cinque Terre">
+              <img src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
             </a>
             <div class="desc">Add a description of the image here</div>
           </div>          

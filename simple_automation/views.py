@@ -70,7 +70,7 @@ def upload_file(request):
             material_name_map = {}
 
             # Process .ods file to create material_name_map
-            ods_file_path = 'simple_automation/static/materials.ods'
+            ods_file_path = 'static/materials.ods'
             data = pyexcel_ods.get_data(ods_file_path)
             sheet = data.get("Sheet1", [])
             for row in sheet:
