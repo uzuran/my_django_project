@@ -2,12 +2,12 @@ body {
   margin: 0;
   background-color: #ebfeff;
 }
-.portfolio {
+.wraper{
   max-width: 1500px;
   margin: auto;
-  filter: drop-shadow(0px 10px 81px rgba(0, 0, 0, 0.97));
+  filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.1));
 }
-.head {
+.wraper-head {
   background-color: #ebfeff;
   font-family: "Sora";
 }
@@ -26,18 +26,20 @@ body {
 .ft1 {
   width: 400px;
 }
+
 .about {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 100px;
   font-size: 20px;
   font-style: normal;
   background-color: white;
-  gap: 200px;
+  gap: 100px;
 }
+
 .button-for-download {
-  margin: 20px 0px;
+  margin: 20px;
   width: 190px;
   height: 60px;
   font-family: "serif";
@@ -49,7 +51,7 @@ body {
   background-color: #fff;
   border: none;
   border-radius: 35px;
-  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
 }
@@ -81,7 +83,7 @@ h2 {
 footer {
   display: flex;
   flex-direction: column;
-  padding: 0 100px;
+  padding:100px ;
   background-color: #ebfeff;
 }
 .greetings {
@@ -94,87 +96,56 @@ footer {
   font-size: 15px;
   font-style: regular;
 }
-.text {
-  margin-bottom: 0px;
-}
+
 .text-about-me {
   font-family: "Sora";
   font-size: 15px;
   font-style: regular;
 }
 /* For tablets and smaller screens (up to 900px wide) */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
   .header {
     flex-direction: column-reverse;
-    padding: 50px;
+    padding: 100px;
     gap: 30px;
   }
   .about {
     flex-direction: column;
     gap: 50px;
   }
-  .skills-icons .text {
+  .button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .skills-icons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    gap: 50px;
   }
+  .ft2 {
+    max-width: 100%; /* Reduce width on smaller screens to avoid overflow */
+}
 }
 
 /* For mobile phones (up to 600px wide) */
 @media only screen and (max-width: 600px) {
-  .header {
-    padding: 20px;
-    gap: 20px;
-  }
   .about {
     gap: 30px;
   }
-  .skills-icons .text {
-    flex-direction: column;
-    align-items: center;
+  .skills-icons  {
     gap: 10px;
   }
-}
-
-/* For very small screens (up to 400px wide) */
-@media only screen and (max-width: 400px) {
-  .header {
-    padding: 10px;
-    gap: 10px;
-  }
-  .about {
-    gap: 20px;
-  }
-  .skills-icons .text {
+  .button{
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
   }
-  .skills-icons{
+  .text {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
   }
-}
 
-
-.ft2 {
-  height: auto; /* Maintain the aspect ratio of the image */
-  display: block; /* Remove any default inline spacing/margins */
-  margin: 0 auto; /* Center the image horizontally if it’s a block-level element */
-}
-
-/* For specific adjustments on mobile devices */
-@media only screen and (max-width: 600px) {
-  .ft2 {
-      max-width: 90%; /* Reduce width on smaller screens to avoid overflow */
-  }
-}
-
-/* For very small screens */
-@media only screen and (max-width: 400px) {
-  .ft2 {
-      max-width: 90%; /* Further reduce width for very small screens */
-  }
 }
