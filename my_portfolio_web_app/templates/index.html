@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Sora' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Sora"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Černopaščenko</title>
     {% load static %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
     <link rel="stylesheet" href="{% static 'css/hamburger.css' %}" />
     <link rel="stylesheet" href="{% static 'css/projects.css' %}" />
-   <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/sidebar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile-adaptive.css' %}" />
   </head>
   <body class="main-body-class">
-
     <div class="icon-bar">
-      <a href="https://www.facebook.com/winyl.beat.1" class="facebook"><i class="fa fa-facebook"></i></a> 
-      <a href="mailto:else.artem@gmail.com" class="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a> 
-      <a href="https://www.linkedin.com/in/ar%C5%A5om-%C4%8Dernopa%C5%A1%C4%8Denko-a65b82229/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-      <a href="https://github.com/uzuran" class="github"><i class="fa fa-github"></i></a>
-      <a href="https://wa.me/+420704214083" class="whatsup"><i class="fa fa-whatsapp"></i></a>
-      <a href="https://t.me/+420704214083" class="telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/winyl.beat.1" class="facebook"
+        ><i class="fa fa-facebook"></i
+      ></a>
+      <a href="mailto:else.artem@gmail.com" class="email"
+        ><i class="fa fa-envelope-o" aria-hidden="true"></i
+      ></a>
+      <a
+        href="https://www.linkedin.com/in/ar%C5%A5om-%C4%8Dernopa%C5%A1%C4%8Denko-a65b82229/"
+        class="linkedin"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+      <a href="https://github.com/uzuran" class="github"
+        ><i class="fa fa-github"></i
+      ></a>
+      <a href="https://wa.me/+420704214083" class="whatsup"
+        ><i class="fa fa-whatsapp"></i
+      ></a>
+      <a href="https://t.me/+420704214083" class="telegram"
+        ><i class="fa fa-telegram" aria-hidden="true"></i
+      ></a>
     </div>
     <div class="navbar">
-      <h1 class="logo-name">Černopaščenko</h1>
+      <h1>Černopaščenko</h1>
       <div class="hamburger_menu">
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
@@ -43,16 +66,20 @@
       <div class="head">
         <div id="home" class="header">
           <div class="text">
-            <p class="greetings">Hi Everyone, I am</p>
+            <h2 class="greetings">Hi Everyone, I am</h2>
             <h1>Černopaščenko Arťom</h1>
             <p class="welcome-text">
-              Welcome to my site! Here, you'll find a showcase of my professional journey,
-            featuring my CV, an array of projects, and a glimpse into who I am.
-            Let's embark on this journey together as I introduce myself and share my passions and
-            experiences.
+              Welcome to my site! Here, you'll find a showcase of my
+              professional journey, featuring my CV, an array of projects, and a
+              glimpse into who I am. Let's embark on this journey together as I
+              introduce myself and share my passions and experiences.
             </p>
-          <a href="{% static 'cv_en.pdf' %}"><button class="button-for-download"> CV english</button></a>
-            <a href="{% static 'cv_cz.pdf' %}"><button class="button-for-download">CV czech</button></a>
+            <a href="{% static 'cv_en.pdf' %}"
+              ><button class="button-for-download">CV english</button></a
+            >
+            <a href="{% static 'cv_cz.pdf' %}"
+              ><button class="button-for-download">CV czech</button></a
+            >
           </div>
           <div class="foto">
             <img class="ft" src="{% static 'img/face.png' %}" alt="face" />
@@ -60,20 +87,22 @@
         </div>
 
         <div id="about" class="about">
-          <div class="foto">
-            <img class="ft2" src="{% static 'img/code_typing.png' %}" alt="about" />
+          <div class="code-type-container">
+            <img class="code-type-img" src="{% static 'img/code_typing.png' %}" alt="about"/>
           </div>
-          <div class="text">
+          <div class="text-about-me-container">
             <h2>About</h2>
             <h1>About me</h1>
             <p class="text-about-me">
               As a self-taught IT enthusiast. I have a strong interest in IT,
-              particularly in programming. I have been programming in Python for a year,
-              as you can see on my GitHub profile. Additionally, I have experience in
-              Django, Selenium, SQL, CSS, HTML5, and Linux. Even though I am currently not working in IT,
-              my main goal is to get a job in this area. I am ready to devote all my effort 
-              and time to improving my skills and achieving this goal. I excel in teamwork, 
-              attention to detail, organizational skills, and quick adaptation to new environments.
+              particularly in programming. I have been programming in Python for
+              a year, as you can see on my GitHub profile. Additionally, I have
+              experience in Django, Selenium, SQL, CSS, HTML5, and Linux. Even
+              though I am currently not working in IT, my main goal is to get a
+              job in this area. I am ready to devote all my effort and time to
+              improving my skills and achieving this goal. I excel in teamwork,
+              attention to detail, organizational skills, and quick adaptation
+              to new environments.
             </p>
           </div>
         </div>
@@ -81,55 +110,68 @@
           <h2>Skills</h2>
           <h1>What I am capable of?</h1>
           <div class="skills-icons">
-            <img  src="{% static 'img/python.png' %}" alt="python" />
-            <img   src="{% static 'img/django.png' %}" alt="django" />
-            <img   src="{% static 'img/selenium.png' %}" alt="selenium" />
-            <img   src="{% static 'img/sql.png' %}" alt="sql" />
-            <img   src="{% static 'img/css.png' %}" alt="css" />
-            <img  src="{% static 'img/html.png' %}" alt="html" />
+            <img src="{% static 'img/python.png' %}" alt="python" />
+            <img src="{% static 'img/django.png' %}" alt="django" />
+            <img src="{% static 'img/selenium.png' %}" alt="selenium" />
+            <img src="{% static 'img/sql.png' %}" alt="sql" />
+            <img src="{% static 'img/css.png' %}" alt="css" />
+            <img src="{% static 'img/html.png' %}" alt="html" />
           </div>
         </div>
         <div id="projects" class="projects">
           <h2>Projects</h2>
           <h1>What I am capable of?</h1>
           <div class="projects_gallery">
-          <div class="gallery">
-            <a target="_blank" href="{% url 'simple_app.html' %}">
-              <img  src="{% static 'img/simple_automation.png' %}" alt="simple-automation">
-            </a>
-            <div class="desc">Add a description of the image here</div>
+            <div class="gallery">
+              <a target="_blank" href="{% url 'simple_app.html' %}">
+                <img
+                  src="{% static 'img/simple_automation.png' %}"
+                  alt="simple-automation"
+                />
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+              <a target="_blank" href="https://git-scm.com/">
+                <img
+                  src="{% static 'img/fake_project.png' %}"
+                  alt="Cinque Terre"
+                />
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+              <a target="_blank" href="https://git-scm.com/">
+                <img
+                  src="{% static 'img/fake_project.png' %}"
+                  alt="Cinque Terre"
+                />
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
+            <div class="gallery">
+              <a target="_blank" href="https://git-scm.com/">
+                <img
+                  src="{% static 'img/fake_project.png' %}"
+                  alt="Cinque Terre"
+                />
+              </a>
+              <div class="desc">Add a description of the image here</div>
+            </div>
           </div>
-          <div class="gallery">
-            <a target="_blank" href="https://git-scm.com/">
-              <img  src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>         
-          <div class="gallery">
-            <a target="_blank" href="https://git-scm.com/">
-              <img src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>          
-          <div class="gallery">
-            <a target="_blank" href="https://git-scm.com/">
-              <img src="{% static 'img/fake_project.png' %}" alt="Cinque Terre">
-            </a>
-            <div class="desc">Add a description of the image here</div>
-          </div>          
-        </div>
-
         </div>
         <footer>
           <div id="contacts" class="contacts">
-          <h2>Contacts</h2>
-          <h1>Get in touch</h1>
-          <p><a href="mailto:else.artem@gmail.com">else.artem@gmail.com</a></p>
-          <p> Copyright © 2024. Develop by Ritachka</p>
-        </div>
+            <h2>Contacts</h2>
+            <h1>Get in touch</h1>
+            <p>
+              <a href="mailto:else.artem@gmail.com">else.artem@gmail.com</a>
+            </p>
+            <p>Copyright © 2024. Develop by Ritachka</p>
+          </div>
         </footer>
       </div>
     </div>
-  <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

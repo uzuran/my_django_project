@@ -2,12 +2,12 @@ body {
   margin: 0;
   background-color: #ebfeff;
 }
-.wraper{
+.portfolio{
   max-width: 1500px;
   margin: auto;
   filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.1));
 }
-.wraper-head {
+.head {
   background-color: #ebfeff;
   font-family: "Sora";
 }
@@ -65,12 +65,10 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 0 100px;
-  padding: 50px 0px;
+  margin: 50px;
+  
 }
-.skills h1{
-  text-align: center;
-}
+
 h1 {
   font-family: "Sora";
   font-style: bold;
@@ -79,6 +77,7 @@ h1 {
 h2 {
   color: #457b9d;
   font-size: 22px;
+  margin-bottom: 0px;
 }
 footer {
   display: flex;
@@ -102,50 +101,5 @@ footer {
   font-size: 15px;
   font-style: regular;
 }
-/* For tablets and smaller screens (up to 900px wide) */
-@media only screen and (max-width: 1000px) {
-  .header {
-    flex-direction: column-reverse;
-    padding: 100px;
-    gap: 30px;
-  }
-  .about {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .button {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-  .skills-icons {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: 50px;
-  }
-  .ft2 {
-    max-width: 100%; /* Reduce width on smaller screens to avoid overflow */
-}
-}
 
-/* For mobile phones (up to 600px wide) */
-@media only screen and (max-width: 600px) {
-  .about {
-    gap: 30px;
-  }
-  .skills-icons  {
-    gap: 10px;
-  }
-  .button{
-    flex-direction: column;
-  }
-  .text {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-  }
 
-}

@@ -1,0 +1,73 @@
+/* For tablets and smaller screens (up to 900px wide) */
+@media only screen and (max-width: 1000px) {
+  .header {
+    flex-direction: column-reverse;
+    padding: 100px;
+    gap: 30px;
+  }
+  .about {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  .ft2 {
+    max-width: 100%; /* Reduce width on smaller screens to avoid overflow */
+    h1 {
+      font-size: 5vw; /* Adjust font size for larger screens */
+    }
+  }
+}
+
+/* For mobile phones (up to 600px wide) */
+@media only screen and (max-width: 600px) {
+  .about {
+    gap: 30px;
+  }
+  .skills-icons {
+    gap: 10px;
+  }
+  .button {
+    flex-direction: column;
+  }
+  .text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .text-about-me {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .text-about-me-container {
+    width: 200%;
+    max-width: 320px;
+    background: white;
+    padding: 20px;
+  }
+  
+  .welcome-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .code-type-img {
+    width: 300px;
+    height: auto;
+  }
+
+
+}
