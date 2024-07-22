@@ -68,6 +68,24 @@
     width: 300px;
     height: auto;
   }
+  div.skills h1 {
+    font-size: 20px;
+  }
+
+  div.projects h1 {
+    font-size: 18px;
+  }
+
+  div.contacts h1 {
+    font-size: 18px;
+    margin-top: 8px;
+    
+  }
+
+  div.contacts h2 {
+    padding-top: 20px;
+    margin-top: 60px;
+  }
 
 
 }
