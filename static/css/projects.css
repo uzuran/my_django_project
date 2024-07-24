@@ -11,6 +11,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0 0 50px 0;
 }
 div.gallery {
     margin: 5px;
